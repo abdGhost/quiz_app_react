@@ -1,0 +1,201 @@
+--------- SKY ROKCET --------------
+
+Understanding Provably Fair Gaming: A Simple Guide
+🍹 Your Unique Gaming Recipe
+Imagine your gaming experience as crafting a one-of-a-kind smoothie.
+
+Mixing the Ingredients:
+Your Choice (Client Seed): You pick your favorite fruit.
+Secret Recipe (Server Seed): We add our exclusive ingredients.
+Visit Number (Nonce): Marking your unique visit.
+🥄 Measuring the Sweetness
+Picking a Number: We taste the smoothie with a spoon (convert the hash to a number) to find out just how sweet it is.
+⚖️ Perfectly Balancing the Flavors
+Making It Fair: Adjust the sweetness (0 to 1 scale) to ensure every sip is just right.
+✨ The Magical Touch
+Adding a Twist: We use a special recipe (99 / (1 - X)) to make the game exciting and fair.
+🍹 Ready to Serve!
+Serving the Smoothie: If it's not sweet enough, we make sure to add a bit more, ensuring a delightful experience.
+🔄 Fresh Ingredients Every Time
+New Recipes Regularly: To keep it transparent and fair, we change our secret ingredients often, and you can always check what went into your last smoothie.
+🏆 Fair Play Guaranteed
+Enjoy a transparent, fair, and verifiably fun gaming experience every time you play.
+
+
+---------- CLASSIC DICE (HIGH LOW) ----------
+🍹 Crafting Your Unique Fairness Smoothie: The Formula
+After blending your chosen ingredient (Client Seed), the visit number (Nonce), and our secret recipe (Server Seed) in our magical blender (the HMAC_SHA256 process), we reach a crucial step in crafting your unique smoothie.
+
+🥄 The Essence of Fairness: The Formula
+Tasting the Essence (Hash Conversion):
+
+We take a snippet of our magical blend's essence (8 characters from the hash) and convert this mystical code into a tangible number that we can measure. This conversion uses the hexadecimal system to transform the characters into an int32 value, a process akin to deciphering the intensity of flavors in our smoothie.
+Balancing the Sweetness (Calculating the Result):
+
+The formula to ensure every sip is just right is as follows:
+Result
+=
+(
+Converted Value
+0
+�
+100000000
+×
+10001
+)
+÷
+100
+Result=( 
+0x100000000
+Converted Value
+​
+ ×10001)÷100
+Here’s what we do:
+Divide the Converted Value by 
+0
+�
+100000000
+0x100000000: This scales down the intensity to a manageable level, ensuring the flavor (outcome) isn't too overwhelming.
+Multiply by 10001: This step adjusts the flavor to be within the perfect range, ensuring that every sip offers a new taste.
+Divide by 100: Finally, we refine the flavor to ensure it fits within the expected taste profile (the game's result range), making sure it's neither too sweet nor too bland.
+Ensuring a New Experience Every Time (Seed Refresh):
+
+Just as we might change the secret ingredients for the next smoothie, a new seed is set for the next game to verify the previous blend was made fairly. This ensures that the smoothie bar (game platform) remains a place of endless variety and fairness.
+🌟 Enjoying Your Smoothie
+By following this formula, we guarantee that each smoothie you enjoy at our virtual bar is a one-of-a-kind creation, blending fairness with fun. This detailed recipe, though intricate, is shared openly to ensure you can trust the integrity of each sip (game outcome).
+
+So, next time you're here, remember that behind every smoothie (game result) is a carefully crafted formula designed to ensure fairness, transparency, and satisfaction. Cheers to many more unique and fair gaming experiences!
+
+
+
+--------- Ultimate Dice (RANGE) --------------
+
+Choosing Your Ingredients (HMAC_SHA256 Calculation)
+🍓 Ingredients: clientSeed (Strawberry), nonce (Blueberry), serverSeed (Banana).
+🌪️ Blending: Combining these ingredients in a blender to create a unique, 64-character hexadecimal string.
+2. Measuring the Portion (Hash to Integer Conversion)
+🥛 Portion Size: Taking 8 characters from the hash and converting them into an int32 value, like measuring a cup of smoothie.
+3. Adjusting the Taste (Final Calculation for Fairness)
+🍹 Taste Test: Adjusting the blend's intensity by dividing the int32 value by 0x100000000 and then multiplying by 10000, ensuring it's just right.
+4. Serving and Enjoying (Seed Verification and Transparency)
+🔄 New Recipe for Verification: Changing the seeds (ingredients) for the next blend, like deciding on a new smoothie recipe.
+📜 Transparency: Sharing the recipe process with your customers, showcasing the craft behind the smoothie.
+Interactive Guide Visualization
+Imagine each step of the process represented on a virtual kitchen countertop:
+
+Step 1: You see a cutting board with strawberries, blueberries, and a banana. Next to it, a digital scale represents the hashing process.
+
+Step 2: A measuring cup indicates the portioning of the hash into an int32 value.
+
+Step 3: A mixing spoon and a recipe book are open, suggesting the adjustment of the smoothie's flavor to ensure it meets the desired taste profile.
+
+Step 4: A new set of ingredients is ready for the next recipe, alongside an encrypted recipe card, ensuring the next smoothie remains a surprise until served.
+
+This guide, with its icons and steps, provides a playful yet insightful way to understand the process of ensuring fairness in digital games, akin to crafting the perfect smoothie. It bridges the complexity of cryptographic processes with the simplicity and enjoyment of making a delicious drink.
+
+
+
+
+-------------- WHEEL ------------------
+Ingredients (Seeds and Nonce)
+
+Client Seed: 🍓 (strawberries) or your fruit of choice, symbolizing your personal input.
+Nonce: 🎟️ (a ticket or number), representing the unique sequence for each smoothie order.
+Server Seed: 🧐 (a mystery element), reflecting the smoothie shop's secret ingredients.
+Recipe Creation (HMAC_SHA256 Calculation)
+
+🌪️ (a blender), illustrating the process of blending your choice 
+with the shop's secret ingredients, creating a unique mix.
+Determining the Smoothie's Unique Flavor (Hash Conversion to Integer)
+
+🔍 (a magnifying glass) over 🌈 (a spectrum), 
+depicting the analysis of the blend to determine the unique flavor profile.
+Finalizing the Smoothie (Determining the Wheel Result)
+
+📏 (a measuring cup) or 📋 (a recipe card), 
+showing the adjustment of ingredients to perfect the smoothie according to 
+the unique flavor profile derived.
+
+Verification (Seed Verification)
+🔓 (an unlocked treasure chest), revealing the secret ingredient (like mango), 
+allowing you to verify the fairness and uniqueness of your smoothie.
+Transparency: Sharing the Recipe Process
+
+📜 (a scroll), symbolizing the open sharing of the smoothie-making process, 
+inviting customers to understand and appreciate the craft behind their drink.
+
+
+
+----------MINES-----------------
+
+🍹 Ingredients (Setup)
+Imagine you're making a unique smoothie. The ingredients are numbers (fruits), and the recipe is determined by a combination of server seed, client seed, and nonce (like a unique blending process).
+
+🍓 Fruits (Numbers): A predefined list of fruits (numbers) that will go into the smoothie.
+🔧 Blending Process (Hash Calculation): A unique way to blend these fruits based on the "server seed", "client seed", and "nonce". This is akin to the HMAC_SHA256 hash calculation that determines the order and repetition of fruits in the smoothie.
+📜 Recipe (Code Breakdown)
+🔀 Combining Ingredients (Generating the Hash):
+
+You have a unique way (algorithm) to blend ingredients based on your preferences (clientSeed and nonce) and the blender's capabilities (serverSeed).
+The main function starts the process by combining the clientSeed and nonce, then blending them with the serverSeed to create a unique hash.
+🍹 Blending Steps (getResult Function):
+
+First Blend: Start with an initial mix (hash) and then create a sequence of fruits based on this mix.
+Re-Blend: To ensure the smoothie has a unique taste, we re-blend it by taking the initial mix, further hashing it to create a new sequence.
+🍽 Serving the Smoothie (createNums Function):
+
+Each fruit is associated with a hash value, determining its place in the blend.
+The fruits are sorted based on their hash values, ensuring each smoothie has a unique taste and texture.
+🕹 Interactive Example
+Let's make it interactive by considering you have a choice of different seeds (blender settings) and fruits (numbers). You can select your own "clientSeed", "nonce", and "serverSeed" to see how it affects the final smoothie.
+
+🌀 serverSeed: Choose the type of blender (e.g., high-speed, slow masticating).
+👅 clientSeed: Select your preference (e.g., sweet, sour).
+🗓 nonce: Decide on the blending sequence or day of the week.
+By changing these values, you can see how the final blend (result list) changes, giving you a unique smoothie each time.
+
+Feel free to dive into this interactive process by providing your own values for serverSeed, clientSeed, and nonce, and let's see how your custom smoothie turns out!
+
+
+------ COIN FLIP -------
+🎲 How Results are Calculated in a Fair Game 🎲
+Ensuring fairness and transparency, our game follows a precise method to calculate results. Here's a simplified breakdown with thematic coin icons:
+
+Generate a Unique Combination 🪙
+We create a unique blend using your client seed, a nonce (a once-only number), and the round. This guarantees every game's uniqueness.
+
+Calculate the Hash 🪙➡️🔍
+With the HMAC_SHA256 algorithm, the unique combination is transformed into a 64-character hexadecimal string, ensuring secure and unpredictable outcomes.
+
+Convert to Number 🪙➡️🔢
+The first 8 characters of the hash are converted into an integer, forming the basis for the game result.
+
+Determine the Result 🪙➡️🎯
+This integer is divided by 0x100000000 and then multiplied by 2 to find the game's final outcome, ensuring randomness and fairness.
+
+Set a New Seed for Verification 🪙🔐
+A new seed must be set for future verification, with the server seed encrypted to safeguard integrity until verification.
+
+🍀 Good Luck! 🍀
+Transparency and precision are the cornerstones of our fair game. These details are provided for those who appreciate the importance of understanding the fairness mechanisms in place.
+
+Wishing you all the best as you play!
+
+
+
+
+
+How to Verify Your Gameplay in High/Low Game: A Step-by-Step Guide
+Step 1: Navigate to the High/Low Game Section
+Begin your journey by venturing into the heart of the action. Locate the High/Low game area on the platform, where the thrill of the game awaits. Keep an eye out for the "Verify" button, your gateway to ensuring fairness and transparency in your gameplay.
+
+Step 2: Engage the Verification Process
+Once you've found the "Verify" button, give it a click to initiate the verification process. As soon as you do, a pop-up dialog will make its grand entrance on your screen, designed to guide you through the verification with ease and clarity.
+
+Step 3: Finalize Your Verification
+As you find yourself within the dialog, direct your attention to the lower section. Here lies the "Verify" button - your final step towards securing your gameplay. With a simple click, you activate the verification process, ensuring that your game is fair and untampered with.
+
+
+
+
+
